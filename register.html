@@ -1,0 +1,612 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1.0">
+
+    <meta name="theme-color" content="#020b12">
+
+    <title>Register | TECHNOVA 1.0</title>
+
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body class="register-page">
+
+    <!-- SAME ANIMATED BACKGROUND -->
+    <canvas id="networkCanvas"></canvas>
+
+    <div class="register-glow glow-one"></div>
+    <div class="register-glow glow-two"></div>
+
+
+    <main class="registration-container">
+
+        <!-- TOP BAR -->
+
+        <div class="register-topbar">
+
+            <a href="index.html" class="back-button">
+                ← BACK
+            </a>
+
+            <div class="mini-brand">
+                TECHNOVA <span>1.0</span>
+            </div>
+
+        </div>
+
+
+        <!-- HEADER -->
+
+        <header class="new-register-header">
+
+            <div class="register-badge">
+                REGISTRATION PORTAL
+            </div>
+
+            <h1>
+                COMPLETE YOUR
+                <span>REGISTRATION</span>
+            </h1>
+
+            <p>
+                Enter your details and choose your challenge.
+            </p>
+
+        </header>
+
+
+        <!-- FORM -->
+
+        <form id="registrationForm"
+              class="technova-form">
+
+
+            <!-- =========================
+                 01 PERSONAL DETAILS
+            ========================== -->
+
+            <section class="form-section">
+
+                <div class="section-heading">
+
+                    <span class="section-number">
+                        01
+                    </span>
+
+                    <div>
+                        <h2>PERSONAL DETAILS</h2>
+                        <p>Tell us who you are</p>
+                    </div>
+
+                </div>
+
+
+                <div class="field">
+
+                    <label for="name">
+                        FULL NAME *
+                    </label>
+
+                    <input
+                        type="text"
+                        id="name"
+                        name="name"
+                        placeholder="Enter your full name"
+                        autocomplete="name"
+                        required
+                    >
+
+                </div>
+
+
+                <div class="two-column">
+
+                    <div class="field">
+
+                        <label for="mobile">
+                            MOBILE NUMBER *
+                        </label>
+
+                        <input
+                            type="tel"
+                            id="mobile"
+                            name="mobile"
+                            placeholder="10-digit mobile number"
+                            maxlength="10"
+                            inputmode="numeric"
+                            required
+                        >
+
+                    </div>
+
+
+                    <div class="field">
+
+                        <label for="email">
+                            EMAIL ID *
+                        </label>
+
+                        <input
+                            type="email"
+                            id="email"
+                            name="email"
+                            placeholder="Enter your email"
+                            autocomplete="email"
+                            required
+                        >
+
+                    </div>
+
+                </div>
+
+            </section>
+
+
+
+            <!-- =========================
+                 02 ACADEMIC DETAILS
+            ========================== -->
+
+            <section class="form-section">
+
+                <div class="section-heading">
+
+                    <span class="section-number">
+                        02
+                    </span>
+
+                    <div>
+                        <h2>ACADEMIC DETAILS</h2>
+                        <p>Tell us about your studies</p>
+                    </div>
+
+                </div>
+
+
+                <!-- QUALIFICATION -->
+
+                <div class="field">
+
+                    <label>
+                        QUALIFICATION *
+                    </label>
+
+
+                    <div class="choice-row">
+
+                        <label class="choice-box">
+
+                            <input
+                                type="radio"
+                                name="qualification"
+                                value="UG"
+                                required
+                            >
+
+                            <span>
+                                <strong>UG</strong>
+                                <small>Under Graduate</small>
+                            </span>
+
+                        </label>
+
+
+                        <label class="choice-box">
+
+                            <input
+                                type="radio"
+                                name="qualification"
+                                value="PG"
+                                required
+                            >
+
+                            <span>
+                                <strong>PG</strong>
+                                <small>Post Graduate</small>
+                            </span>
+
+                        </label>
+
+                    </div>
+
+                </div>
+
+
+
+                <!-- DEPARTMENT -->
+
+                <div class="field">
+
+                    <label for="department">
+                        DEPARTMENT *
+                    </label>
+
+                    <div class="select-wrapper">
+
+                        <select
+                            id="department"
+                            name="department"
+                            required
+                        >
+
+                            <option value="">
+                                Select your department
+                            </option>
+
+                            <option value="Computer Applications">
+                                Computer Applications
+                            </option>
+
+                            <option value="Computer Science">
+                                Computer Science
+                            </option>
+
+                            <option value="Information Technology">
+                                Information Technology
+                            </option>
+
+                            <option value="Artificial Intelligence">
+                                Artificial Intelligence
+                            </option>
+
+                            <option value="Data Science">
+                                Data Science
+                            </option>
+
+                            <option value="Other">
+                                Other
+                            </option>
+
+                        </select>
+
+                    </div>
+
+                </div>
+
+
+                <!-- CUSTOM DEPARTMENT -->
+
+                <div
+                    class="field custom-field"
+                    id="customDepartmentBox"
+                >
+
+                    <label for="customDepartment">
+                        SPECIFY YOUR DEPARTMENT *
+                    </label>
+
+                    <input
+                        type="text"
+                        id="customDepartment"
+                        placeholder="Enter your department"
+                    >
+
+                </div>
+
+
+
+                <!-- YEAR -->
+
+                <div class="field">
+
+                    <label for="year">
+                        YEAR *
+                    </label>
+
+                    <div class="select-wrapper">
+
+                        <select
+                            id="year"
+                            name="year"
+                            required
+                            disabled
+                        >
+
+                            <option value="">
+                                Select qualification first
+                            </option>
+
+                        </select>
+
+                    </div>
+
+                </div>
+
+
+                <!-- CUSTOM YEAR -->
+
+                <div
+                    class="field custom-field"
+                    id="customYearBox"
+                >
+
+                    <label for="customYear">
+                        SPECIFY YOUR YEAR *
+                    </label>
+
+                    <input
+                        type="text"
+                        id="customYear"
+                        placeholder="senior"
+                    >
+
+                </div>
+
+            </section>
+
+
+
+            <!-- =========================
+                 03 EVENT
+            ========================== -->
+
+            <section class="form-section">
+
+                <div class="section-heading">
+
+                    <span class="section-number">
+                        03
+                    </span>
+
+                    <div>
+                        <h2>CHOOSE YOUR EVENT</h2>
+                        <p>Select your challenge</p>
+                    </div>
+
+                </div>
+
+
+                <div class="new-event-grid">
+
+
+                    <!-- 01 -->
+
+                    <label class="new-event-card">
+
+                        <input
+                            type="radio"
+                            name="event"
+                            value="Debugging"
+                            required
+                        >
+
+                        <div class="event-index">
+                            01
+                        </div>
+
+                        <div class="event-content">
+
+                            <h3>Debugging</h3>
+
+                            <p>
+                                Find it. Fix it. Win it.
+                            </p>
+
+                        </div>
+
+                        <div class="event-select">
+                            ✓
+                        </div>
+
+                    </label>
+
+
+
+                    <!-- 02 -->
+
+                    <label class="new-event-card">
+
+                        <input
+                            type="radio"
+                            name="event"
+                            value="AI-Application Development"
+                        >
+
+                        <div class="event-index">
+                            02
+                        </div>
+
+                        <div class="event-content">
+
+                            <h3>
+                                AI - Application Development
+                            </h3>
+
+                            <p>
+                                Build intelligent solutions.
+                            </p>
+
+                        </div>
+
+                        <div class="event-select">
+                            ✓
+                        </div>
+
+                    </label>
+
+
+
+                    <!-- 03 -->
+
+                    <label class="new-event-card">
+
+                        <input
+                            type="radio"
+                            name="event"
+                            value="Design using Canva"
+                        >
+
+                        <div class="event-index">
+                            03
+                        </div>
+
+                        <div class="event-content">
+
+                            <h3>
+                                Design using Canva
+                            </h3>
+
+                            <p>
+                                Create. Design. Inspire.
+                            </p>
+
+                        </div>
+
+                        <div class="event-select">
+                            ✓
+                        </div>
+
+                    </label>
+
+
+
+                    <!-- 04 -->
+
+                    <label class="new-event-card">
+
+                        <input
+                            type="radio"
+                            name="event"
+                            value="Jumble Words"
+                        >
+
+                        <div class="event-index">
+                            04
+                        </div>
+
+                        <div class="event-content">
+
+                            <h3>
+                                Jumble Words
+                            </h3>
+
+                            <p>
+                                Decode the challenge.
+                            </p>
+
+                        </div>
+
+                        <div class="event-select">
+                            ✓
+                        </div>
+
+                    </label>
+
+
+
+                    <!-- 05 -->
+
+                    <label class="new-event-card">
+
+                        <input
+                            type="radio"
+                            name="event"
+                            value="Ideation"
+                        >
+
+                        <div class="event-index">
+                            05
+                        </div>
+
+                        <div class="event-content">
+
+                            <h3>Ideation</h3>
+
+                            <p>
+                                Turn ideas into possibilities.
+                            </p>
+
+                        </div>
+
+                        <div class="event-select">
+                            ✓
+                        </div>
+
+                    </label>
+
+
+
+                    <!-- 06 -->
+
+                    <label class="new-event-card">
+
+                        <input
+                            type="radio"
+                            name="event"
+                            value="AI-Video Generator"
+                        >
+
+                        <div class="event-index">
+                            06
+                        </div>
+
+                        <div class="event-content">
+
+                            <h3>
+                                AI - Video Generator
+                            </h3>
+
+                            <p>
+                                Imagine it. Generate it.
+                            </p>
+
+                        </div>
+
+                        <div class="event-select">
+                            ✓
+                        </div>
+
+                    </label>
+
+                </div>
+
+            </section>
+
+
+
+            <!-- ERROR -->
+
+            <div
+                id="formMessage"
+                class="new-form-message"
+            ></div>
+
+
+
+            <!-- SUBMIT -->
+
+            <button
+                type="submit"
+                id="registerSubmit"
+                class="final-register-btn"
+            >
+
+                <span>
+                    COMPLETE REGISTRATION
+                </span>
+
+                <span class="submit-arrow">
+                    →
+                </span>
+
+            </button>
+
+
+            <p class="privacy-note">
+                Your information will only be used
+                for TECHNOVA 1.0 event registration.
+            </p>
+
+        </form>
+
+    </main>
+
+
+    <script src="js/register.js"></script>
+
+</body>
+</html>
